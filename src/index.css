@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-cormorant: "Cormorant Garamond", Georgia, serif;
+  --font-dm-serif: "DM Serif Display", Georgia, serif;
+  --font-sans: "Manrope", system-ui, -apple-system, sans-serif;
+
+  --color-blush-50: #FDF8F8;
+  --color-blush-100: #F9EFEF;
+  --color-blush-200: #F3DCDE;
+  --color-blush-300: #E8C5C8;
+  --color-blush-400: #D8A5AA;
+  --color-blush-500: #C28289;
+  --color-blush-800: #71383F;
+
+  --color-cream-50: #FCFDF9;
+  --color-cream-100: #FAF8F2;
+  --color-cream-200: #F4EFE3;
+  --color-cream-300: #EADFC8;
+
+  --color-teal-salon: #1C9B8E;
+  --color-teal-accent: #2AB8A8;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #FCF9F6;
+    color: #4A3E3D;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+  }
+
+  h1, .font-main-heading {
+    font-family: var(--font-cormorant);
+    font-weight: 700;
+  }
+
+  h2, h3, h4, .font-section-heading {
+    font-family: var(--font-dm-serif);
+    font-weight: 400;
+  }
+
+  .font-serif-luxury {
+    font-family: var(--font-cormorant);
+  }
+
+  .font-serif-section {
+    font-family: var(--font-dm-serif);
+  }
+}
+
+/* Glassmorphism & Custom Luxury Utilities */
+.glass-nav {
+  background: rgba(253, 248, 248, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(232, 197, 200, 0.3);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(243, 220, 222, 0.6);
+}
+
+.glass-card-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(216, 165, 170, 0.8);
+  box-shadow: 0 20px 40px -15px rgba(216, 165, 170, 0.25);
+  transform: translateY(-4px);
+}
+
+.shimmer-text {
+  background: linear-gradient(135deg, #71383F 0%, #C28289 50%, #71383F 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF5F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #E0C0C3;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C28289;
+}
+

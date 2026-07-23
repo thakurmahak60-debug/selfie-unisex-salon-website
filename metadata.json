@@ -1,0 +1,6 @@
+{
+  "name": "Selfie Unisex Salon",
+  "description": "Premium luxury unisex salon & spa at TI Mall, MG Road, Indore. Offering hair styling, bridal makeup, skincare, nail extensions, and grooming in a relaxing spa atmosphere.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
